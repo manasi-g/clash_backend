@@ -7,23 +7,7 @@ from django.contrib.auth import authenticate
 from users.models import UserProfile
 from django.http import HttpResponse
 
-def register(request):
-    
-    if request.method == 'POST':
-        form = UserRegisterForm(request.POST)
-        if form.is_valid():
-            form.save()
-            username= form.cleaned_data.get('username')
-            try:
-                user = User.objects.get(username=username)
-            except user.DoesNotExist:
-                return username
-            raise forms.ValidationError(u'Username "%s" is already in use.' % username)
 
-    else:
-        form = UserRegisterForm()
-
-    return render(request, 'users/register.html', {'form': form})
 
 def page1(request):
     

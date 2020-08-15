@@ -25,8 +25,8 @@ urlpatterns = [
     path('page2/', user_views.page2, name='page2'),
     path('page1/', user_views.page1, name='page1'),
     
-    path('register/', user_views.register, name='register'),
-    path('', include('blog.urls')),
+    
+   
     path('', include('accounts.urls'))
 
 ]

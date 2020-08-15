@@ -1,7 +1,20 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
 
-{% block content %}
+<h4>List of numbers in the input range:</h4>
 
-result: {{yes}}
+{% for i in result %}
+<ul>
+    <li>
+        {{ i }}
+    </li>
+</ul>
+{% endfor %}
 
-{% endblock%}
+</body>
+</html>
