@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINSI</title>
+</head>
+<body>
+    
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alertalert-{{ message.tags}}">
+                {{message}}
+
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% block content %}
+
+
+    {% endblock%}
+</body>
+</html>

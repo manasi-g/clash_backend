@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>{{ message }}</h2>
+{% if profile %}
+<table>
+     <tr>
+         <td>Name</td>
+         <td>:</td>
+         <td>{{ profile.f_name }} {{ profile.l_name }}</td>
+     </tr>
+     <tr>
+         <td>Email</td>
+         <td>:</td>
+         <td>{{ profile.email }}</td>
+     </tr>
+     <tr>
+         <td>Phone no.</td>
+         <td>:</td>
+         <td>{{ profile.ph_no }}</td>
+     </tr>
+     <tr>
+         <td>Gender</td>
+         <td>:</td>
+         <td>{{ profile.gender }}</td>
+     </tr>
+</table>
+{% endif %}
+<a href="{% url 'page2' %}"><h4>Enter email again?</h4></a><p>
+    <a href="{% url 'page1' %}"><h4>Enter user info?</h4></a>
+</body>

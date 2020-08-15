@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="content-section">
+    <form method="POST">
+    {% csrf_token %}
+    First Name :-
+    <input type="text" name="fname"><p>
+    Last Name :-
+    <input type="text" name="lname"><p>
+    Phone no. :-
+    <input type="number" name="phno"><p>
+    Email id :-
+    <input type="text" name="email"><p>
+    Password :-
+    <input type="password" name="password"/><p>
+    Gender :-
+    <input type="radio" name="gender" value="Male">Male<p>
+    <input type="radio" name="gender" value="Female">Female<p>
+    <input type="radio" name="gender" value="None">None<p>
+    <input type="submit" value="Submit data">
+</form>
+{% endblock%}
